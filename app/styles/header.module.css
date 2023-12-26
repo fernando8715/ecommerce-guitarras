@@ -1,0 +1,61 @@
+.header {
+    background-image: linear-gradient(rgb(0 0 0 /.8), rgb(0 0 0 / .7)), url(../../public/img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 20rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.navigation a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.link:hover,
+.active {
+    background-color: var(--primary);
+}
+
+.imgCarrito {
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    background-image: linear-gradient(rgb(0 0 0 /.7), rgb(0 0 0 / .8));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+}
+
+.contenido p {
+    color: var(--white);
+}
