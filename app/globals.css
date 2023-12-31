@@ -22,6 +22,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 [class*="contenedor"], 
 main {
   width: min(95%, 120rem);
@@ -33,4 +34,17 @@ main {
   font-weight: 900;
   color: var(--primary);
   margin: 5rem 0;
+}
+
+.error, 
+.error_enlace {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.error_enlace {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
 }

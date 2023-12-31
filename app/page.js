@@ -1,10 +1,6 @@
-
-// export async function generateMetadata({title='', description=''}){
-//   return {
-//     title: `GuitarLa - ${title}`,
-//     description,
-//   }
-// }
+export const metadata = {
+  title: 'GuitarLA - Inicio',
+}
 
 export default function Home() {
   return (

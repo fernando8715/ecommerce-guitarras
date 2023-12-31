@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link href={'/'} className={path === '/' ? styles.active : ''}>Inicio</Link>
             <Link href={'/nosotros'} className={path === '/nosotros' ? styles.active : ''}>Nosotros</Link>
             <Link href={'/tienda'} className={path === '/tienda' ? styles.active : ''}>Tienda</Link>
-            <Link href={'/blog'} className={path === '/blog' ? styles.active : ''}>Blog</Link>
+            <Link href={'/blogs'} className={path === '/blogs' ? styles.active : ''}>Blog</Link>
             <Link href={'/'} >
                 <div className={styles.imgCarrito}>
                     <Image

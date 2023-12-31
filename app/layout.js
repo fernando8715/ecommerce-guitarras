@@ -6,7 +6,7 @@ import { Header, Footer } from './components'
 const outfit = Outfit({ subsets: ['latin'], display: 'swap' });
 
 export const metadata = {
-  title: 'GuitarLA - Inicio',
+  title: 'GuitarLA',
   description: 'e-commerce de una tienda de guitarras utilizando herramientas HTML, CSS, JavaScript, React, Strapi, Next.js, Git y GitHub',
   icons: {
     icon: '/antal.svg',

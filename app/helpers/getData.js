@@ -10,3 +10,12 @@ export async function getDataDinamic() {
     return respuesta.json()
   }
 
+export async function getDataStatic(url){
+  const res = await fetch(url);
+
+  if(!res.ok){
+    return notFound();
+  }
+
+  return res.json();
+}
