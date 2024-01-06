@@ -1,6 +1,5 @@
-import Image from "next/image";
-import styles from '../../styles/guitarras.module.css'
 import { notFound } from "next/navigation";
+import GuitarraCarrito from "@/app/components/guitarraCarrito";
 
 
 export async function generateMetadata({ params }) {
@@ -24,25 +23,14 @@ export default async function Page({ params }) {
   const { data: guitarra } = await respuesta.json();
   if (guitarra.length === 0) {
     return notFound()
-  } else {
-    const { nombre, image, description, precio, publishedAt } = guitarra[0].attributes;
-
-    return (
-      <div className="contenedor">
-        <div className={styles.guitarra}>
-          <Image
-            src={image?.data.attributes.url}
-            width={300}
-            height={400}
-            alt={`Imagen de guitarra ${nombre}`}
-          />
-          <div className={styles.contenido}>
-            <h3>{nombre}</h3>
-            <p className={styles.descripcion}>{description}</p>
-            <strong className={styles.precio}>${precio}</strong>
-          </div>
-        </div>
-      </div>
-    )
   }
+
+  return (
+    <div className="contenedor">
+      <GuitarraCarrito
+        guitarra={guitarra}
+      />
+    </div>
+  )
+
 }

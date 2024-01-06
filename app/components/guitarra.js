@@ -24,6 +24,7 @@ export default function Guitarra({ guitarra }) {
                     className={styles.enlace}                
                 >Ver producto
                 </Link>
+                
             </div>
         </div>
     )
