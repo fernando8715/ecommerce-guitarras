@@ -2,7 +2,7 @@ import { Outfit } from 'next/font/google';
 import './globals.css'; // global styles apply to every route
 import './normalize.css'
 import { Header, Footer } from './components'
-import { PostProvider } from './context/PostContext';
+import { PostProvider } from './context/postProvider';
 
 const outfit = Outfit({ subsets: ['latin'], display: 'swap' });
 
@@ -17,9 +17,7 @@ export default function RootLayout({ children }) {
       <body className={outfit.className}>
         <Header />
         <PostProvider>
-          <div>
             {children}
-          </div>
         </PostProvider>
         <Footer />
       </body>

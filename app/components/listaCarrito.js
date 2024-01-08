@@ -24,30 +24,29 @@ const ListaCarrito = () => {
                     <div>
                         <p className={styles.nombre}>{p.nombre}</p>
                         <p className={styles.precio}>Precio unidad: <span>${p.precio}</span></p>
-                        <div className={styles.cantidad}>
-                            <p>Cantidad:</p>
+                        <p>Cantidad:</p>
 
-                            <select
-                                className={styles.select}
-                                value={p.cantidad}
-                                onChange={e => updateCantidad({
-                                    id: p.id,
-                                    cantidad: e.target.value
-                                })}
-                            >
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
+                        <select
+                            name="cantidad"
+                            className={styles.select}
+                            value={p.cantidad}
+                            onChange={e => updateCantidad({
+                                id: p.id,
+                                cantidad: e.target.value
+                            })}
+                        >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                         <p className={styles.subtotal}>Subtotal: <span>${p.precio * p.cantidad}</span></p>
                     </div>
                     <button
                         className={styles.eliminar}
                         type="button"
-                        onClick={()=> deleteProduct(p.id)}
+                        onClick={() => deleteProduct(p.id)}
                     >
                         X
                     </button>

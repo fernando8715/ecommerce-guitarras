@@ -9,7 +9,7 @@ import styles from '../styles/guitarras.module.css'
 export default function GuitarraCarrito({ guitarra }) {
 
     const [cantidad, setCantidad] = useState(0)
-    const {carrito, addProduct} = useContext(PostContext);
+    const {addProduct} = useContext(PostContext);
       
     const { nombre, image, description, precio, publishedAt } = guitarra[0].attributes;
 

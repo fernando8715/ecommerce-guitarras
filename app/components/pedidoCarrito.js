@@ -6,7 +6,7 @@ const PedidoCarrito = () => {
 
     const { carrito } = useContext(PostContext);
     const [total, setTotal] = useState(0)
-
+   
     useEffect(() => {
         const valorTotal = carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0)
         setTotal(valorTotal);

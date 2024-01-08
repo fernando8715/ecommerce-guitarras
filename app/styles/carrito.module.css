@@ -55,10 +55,8 @@
     font-weight: 700;
 }
 
-.cantidad {}
-
 .select {
-    all: unset;
+    /* all: unset; */
     border: 1px solid var(--black);
     padding: .5rem;
     text-align: center;
@@ -76,17 +74,20 @@
 .eliminar {
     all: unset;
     position: absolute;
-    top: 5rem;
-    right: 30%;
+    top: 4rem;
+    right: 25%;
     font-weight: 900;
     background-color: #ee1a1ae9;
     color: var(--white);
-    padding: .5rem 1.5rem;
+    padding: .4rem 1.2rem;
     border: none;
     border-radius: 3px;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
 .eliminar:hover {
     cursor: pointer;
     background-color: #ff0505;
+    scale: 1.1;
 }
