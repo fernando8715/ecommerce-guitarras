@@ -14,12 +14,12 @@ export default async function Home() {
   const urlBlogs = `${process.env.API_URL}/api/blogs?populate=image`
   const urlCurso = `${process.env.API_URL}/api/curso?populate=image`
 
+  const respGuitarras = await fetch(urlGuitarras, { cache: 'no-store' });
 
-  const [respGuitarras, respBlogs, respCurso] = await Promise.all([
-    fetch(urlGuitarras),
+  const [respBlogs, respCurso] = await Promise.all([
     fetch(urlBlogs),
     fetch(urlCurso)
-  ])
+  ]);
 
   const [{ data: guitarras }, { data: blogs }, { data: curso }] = await Promise.all([
     respGuitarras.json(),

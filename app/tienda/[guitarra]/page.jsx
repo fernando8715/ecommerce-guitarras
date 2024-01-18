@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
 
-  const respuesta = await fetch(`${process.env.API_URL}/api/guitarras?filters[url]=${params.guitarra}&populate=image`)
+  const respuesta = await fetch(`${process.env.API_URL}/api/guitarras?filters[url]=${params.guitarra}&populate=image`, { cache: 'no-store' });
   const { data: guitarra } = await respuesta.json();
   if (guitarra.length === 0) {
     return notFound()
